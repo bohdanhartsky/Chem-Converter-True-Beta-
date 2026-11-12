@@ -9,7 +9,7 @@ import Length_Page
 import Temperature_Page
 import Area_Page
 import Volume_Page
-set_website_title("Corgi Cafe")
+set_website_title("Chem Converter")
 set_site_information(
     author="Bohdan Hartsky",
     description="Unit conversion.",
