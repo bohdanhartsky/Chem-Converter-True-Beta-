@@ -15,7 +15,7 @@ set_site_information(
     description="Unit conversion.",
     sources="Thanks to the TA's that helped me with this.",
     planning=["plan.pdf", "design.pdf"],
-    links=["https://github.com/bohdanhartsky/Chem-Converter-True-Beta"]
+    links=["https://github.com/bohdanhartsky/Chem-Converter-True-Beta/"]
 )
 hide_debug_information()
 set_website_framed(False)
