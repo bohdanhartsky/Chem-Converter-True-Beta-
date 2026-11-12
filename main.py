@@ -2,14 +2,23 @@ import math
 import random
 from dataclasses import dataclass
 from drafter import *
- 
+
 # Each of these files holds a dictionary of conversions and a convert() function.
 # They must be saved in the same folder as this file.
 import Length_Page
 import Temperature_Page
 import Area_Page
 import Volume_Page
- 
+set_website_title("Corgi Cafe")
+set_site_information(
+    author="Bohdan Hartsky",
+    description="Unit conversion.",
+    sources="Thanks to the TA's that helped me with this.",
+    planning=["plan.pdf", "design.pdf"],
+    links=["https://github.com/bohdanhartsky/Chem-Converter-True-Beta"]
+)
+hide_debug_information()
+set_website_framed(False)
  
 # ---------------------------------------------------------------------------
 # Conversion data (comes from the imported page files)
