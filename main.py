@@ -5,10 +5,10 @@ from drafter import *
  
 # Each of these files holds a dictionary of conversions and a convert() function.
 # They must be saved in the same folder as this file.
-import Length_Page.py
-import Temperature_Page.py
-import Area_Page.py
-import Volume_Page.py
+import Length_Page
+import Temperature_Page
+import Area_Page
+import Volume_Page
  
  
 # ---------------------------------------------------------------------------
