@@ -127,7 +127,7 @@ def index(state: State) -> Page:
     return Page(state, [
         Header("Unit Converter"),
         "What would you like to convert?",
-        Button("Length", length_page),
+        Button("Length", length),
         Button("Temperature", temperature_page),
         Button("Area", area_page),
         Button("Volume", volume_page),
@@ -169,7 +169,7 @@ def converter_page(state: State, category: str) -> Page:
  
  
 @route
-def length_page(state: State) -> Page:
+def length(state: State) -> Page:
     return converter_page(state, "Length")
  
  
@@ -190,7 +190,7 @@ def volume_page(state: State) -> Page:
  
 # Lets other pages send the user back to the converter they were using
 CATEGORY_PAGES = {
-    "Length": length_page,
+    "Length": length,
     "Temperature": temperature_page,
     "Area": area_page,
     "Volume": volume_page,
