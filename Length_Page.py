@@ -1,0 +1,136 @@
+
+# How many meters are in 1 of each unit (exact definitions)
+conversions = {
+    "kilometer": {
+        "kilometer": 1.0,
+        "meter": 1000.0,
+        "centimeter": 100000.0,
+        "millimeter": 1000000.0,
+        "micrometer": 1000000000.0,
+        "nanometer": 1000000000000.0,
+        "mile": 0.621371192237334,
+        "yard": 1093.6132983377079,
+        "foot": 3280.839895013123,
+        "inch": 39370.07874015748,
+    },
+    "meter": {
+        "kilometer": 0.001,
+        "meter": 1.0,
+        "centimeter": 100.0,
+        "millimeter": 1000.0,
+        "micrometer": 1000000.0,
+        "nanometer": 1000000000.0,
+        "mile": 0.0006213711922373339,
+        "yard": 1.0936132983377078,
+        "foot": 3.2808398950131235,
+        "inch": 39.37007874015748,
+    },
+    "centimeter": {
+        "kilometer": 1e-05,
+        "meter": 0.01,
+        "centimeter": 1.0,
+        "millimeter": 10.0,
+        "micrometer": 10000.0,
+        "nanometer": 10000000.0,
+        "mile": 6.21371192237334e-06,
+        "yard": 0.010936132983377077,
+        "foot": 0.03280839895013123,
+        "inch": 0.3937007874015748,
+    },
+    "millimeter": {
+        "kilometer": 1e-06,
+        "meter": 0.001,
+        "centimeter": 0.1,
+        "millimeter": 1.0,
+        "micrometer": 1000.0,
+        "nanometer": 1000000.0,
+        "mile": 6.21371192237334e-07,
+        "yard": 0.0010936132983377078,
+        "foot": 0.0032808398950131233,
+        "inch": 0.03937007874015748,
+    },
+    "micrometer": {
+        "kilometer": 1e-09,
+        "meter": 1e-06,
+        "centimeter": 0.0001,
+        "millimeter": 0.001,
+        "micrometer": 1.0,
+        "nanometer": 1000.0,
+        "mile": 6.21371192237334e-10,
+        "yard": 1.0936132983377078e-06,
+        "foot": 3.2808398950131235e-06,
+        "inch": 3.937007874015748e-05,
+    },
+    "nanometer": {
+        "kilometer": 1e-12,
+        "meter": 1e-09,
+        "centimeter": 1e-07,
+        "millimeter": 1e-06,
+        "micrometer": 0.001,
+        "nanometer": 1.0,
+        "mile": 6.213711922373339e-13,
+        "yard": 1.0936132983377077e-09,
+        "foot": 3.2808398950131233e-09,
+        "inch": 3.937007874015748e-08,
+    },
+    "mile": {
+        "kilometer": 1.609344,
+        "meter": 1609.344,
+        "centimeter": 160934.4,
+        "millimeter": 1609344.0,
+        "micrometer": 1609344000.0,
+        "nanometer": 1609344000000.0,
+        "mile": 1.0,
+        "yard": 1760.0,
+        "foot": 5280.0,
+        "inch": 63360.0,
+    },
+    "yard": {
+        "kilometer": 0.0009144,
+        "meter": 0.9144,
+        "centimeter": 91.44,
+        "millimeter": 914.4,
+        "micrometer": 914400.0,
+        "nanometer": 914400000.0,
+        "mile": 0.0005681818181818182,
+        "yard": 1.0,
+        "foot": 3.0,
+        "inch": 36.0,
+    },
+    "foot": {
+        "kilometer": 0.0003048,
+        "meter": 0.3048,
+        "centimeter": 30.48,
+        "millimeter": 304.8,
+        "micrometer": 304800.0,
+        "nanometer": 304800000.0,
+        "mile": 0.0001893939393939394,
+        "yard": 0.3333333333333333,
+        "foot": 1.0,
+        "inch": 12.0,
+    },
+    "inch": {
+        "kilometer": 2.54e-05,
+        "meter": 0.0254,
+        "centimeter": 2.54,
+        "millimeter": 25.4,
+        "micrometer": 25400.0,
+        "nanometer": 25400000.0,
+        "mile": 1.5782828282828283e-05,
+        "yard": 0.027777777777777776,
+        "foot": 0.08333333333333333,
+        "inch": 1.0,
+    },
+}
+ 
+def convert(value, from_unit, to_unit):
+    return value * conversions[from_unit.lower()][to_unit.lower()]
+ 
+print(convert(1, "Mile", "Inch"))  # 63360.0
+
+
+
+print(conversions["mile"]["kilometer"])   # 1.609344
+print(conversions["foot"]["inch"])        # 12.0 (may show tiny float error)
+print(convert(5, "Yard", "Meter"))        # 4.572
+
