@@ -1,10 +1,15 @@
+import sys
+from pathlib import Path
+
+# Make sure Python can find other files in this folder
+project_folder = str(Path(__file__).resolve().parent)
+sys.path.insert(0, project_folder)
+
 import math
 import random
 from dataclasses import dataclass
 from drafter import *
 
-# Each of these files holds a dictionary of conversions and a convert() function.
-# They must be saved in the same folder as this file.
 import Length_Page
 import Temperature_Page
 import Area_Page
