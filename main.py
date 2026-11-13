@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 # Make sure Python can find other files in this folder
-project_folder = str(Path(__file__).resolve().parent)
+project_folder = str(Path(__name__).resolve().parent)
 sys.path.insert(0, project_folder)
 
 import math
